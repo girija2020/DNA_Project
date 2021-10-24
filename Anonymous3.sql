@@ -28,5 +28,5 @@ CREATE TABLE menu(location varchar(20) , menu varchar(20) ,CONSTRAINT PK_menu PR
 
 
 CREATE TABLE tablesbooked(phone_num int  FOREIGN KEY, table_num int ,CONSTRAINT PK_tablesbooked PRIMARY KEY (phone_num,table_num));
-CREATE TABLE ingredients(item_num int PRIMARY KEY FOREIGN KEY, ingredient varchar(30) PRIMARY KEY);
+CREATE TABLE ingredients(item_num int PRIMARY KEY FOREIGN KEY, ingredient varchar(30) PRIMARY KEY,CONSTRAINT PK_ingredients PRIMARY KEY (item_num,ingredient));
 
