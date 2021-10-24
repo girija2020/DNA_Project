@@ -27,6 +27,6 @@ CREATE TABLE delivery_apps(Delivery_Id int PRIMARY KEY,Name_of_DeliveryApp VARCH
 CREATE TABLE menu(location varchar(20) , menu varchar(20) ,CONSTRAINT PK_menu PRIMARY KEY (location,menu));
 
 
-CREATE TABLE tablesbooked(phone_num int PRIMARY KEY FOREIGN KEY, table_num int PRIMARY KEY);
+CREATE TABLE tablesbooked(phone_num int  FOREIGN KEY, table_num int ,CONSTRAINT PK_tablesbooked PRIMARY KEY (phone_num,table_num));
 CREATE TABLE ingredients(item_num int PRIMARY KEY FOREIGN KEY, ingredient varchar(30) PRIMARY KEY);
 
