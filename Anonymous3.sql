@@ -2,7 +2,7 @@ CREATE SCHEMA restaurant_chain;
 
 USE restaurant_chain;
 
-CREATE TABLE restaurant(Location_of_Restaurant varchar(20) PRIMARY KEY, Name_of_Restaurant varchar(20) NOT NULL, number_of_tables int, pre-booking int, on_spot_reservation int, advertising int, salaries int, furniture int, raw_materials int);
+CREATE TABLE restaurant(Location_of_Restaurant varchar(20) PRIMARY KEY, Name_of_Restaurant varchar(20) NOT NULL, number_of_tables int, pre_booking int, on_spot_reservation int, advertising int, salaries int, furniture int, raw_materials int);
 
 CREATE TABLE food_items(item_number int PRIMARY KEY, Descript varchar(100), rating int, price float);
 
