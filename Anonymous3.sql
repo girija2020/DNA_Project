@@ -17,4 +17,8 @@ CREATE TABLE Orders(Order_number int PRIMARY KEY, Order_time timestamp, Order_st
 
 CREATE TABLE Profession(Profession varchar(20) PRIMARY KEY, Salary int, Employee_Working_Hours int, PF_Percentage int);
 
-CREATE TABLE Online_delivery(Delivery_id varchar(20) PRIMARY KEY, Location varchar(20) FOREIGN KEY, Order_number int FOREIGN KEY
+CREATE TABLE Customer(Phone_number int PRIMARY KEY, user_name varchar(20), Email varchar(30) UNIQUE, Order_number int FOREGN KEY, Amount_Recieved bool, Name varchar(20));
+
+CREATE TABLE Online_delivery(Delivery_id varchar(20) PRIMARY KEY, Location varchar(20) FOREIGN KEY, Order_number int FOREIGN KEY, Customer_id int FOREIGN KEY);
+
+CREATE TABLE Educational_Qualification(Employee_id int FOREIGN KEY PRIMARY kEY, Educational_qualification varchar(20) PRIMARY KEY);
