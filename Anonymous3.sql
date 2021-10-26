@@ -171,3 +171,6 @@ INSERT INTO Customer VALUES (100, "Police", "police@gmail.com", TRUE, "Police", 
 INSERT INTO Customer VALUES (108, "Ambulance", "ambulance@gmail.com", TRUE, "Ambulance", 2);
 INSERT INTO Customer VALUES (104, "Fire", "fire@gmail.com", FALSE, "Fire", 3);
 INSERT INTO Customer VALUES (110, "Postal", "postal@gmail.com", FALSE, "Postal", 4);
+
+UNLOCK TABLES;
+
