@@ -75,8 +75,109 @@ def Deletion():
     
 
 def Updation():
-    print("Updation")
-    return
+      """
+      Function to update queries mentioned in SRS Document
+      """
+      print("1. updating the costs and ratings of each food item")
+      print("2. Updating the Salary of the Profession Table")
+      print("3. Exit")
+      val = int(input("Choose the query you want to execute> "))
+
+      if val == 3:
+        return
+
+      elif val == 1:
+        try:
+            print("-------------------UPDATING STARTS------------------------")
+            print("")
+            print("food_items TABLE")
+            print("")
+            query="SELECT * FROM food_items"
+            print("")
+            cur.execute(query)
+            result=cur.fetchall()
+            print(result)
+
+            print("")
+            pid = int(input("Please enter the item number of food_item whose data needs to be updated: "))
+            query = "SELECT * FROM food_items WHERE (item_number = '%d')" %(pid)
+            cur.execute(query)
+            result = cur.fetchall() 
+
+            print("")
+            inp1 = float(input("Please enter updated Price: "))
+            inp2 = int(input("Please enter updated rating: "))
+            
+            
+            query = "UPDATE food_items SET Rating = '%d' WHERE item_number = '%d'" %(inp2 , pid)
+            cur.execute(query)
+            con.commit()
+
+            query = "UPDATE food_items SET Price = '%f' WHERE item_number = '%d'" %(inp1 , pid)
+            cur.execute(query)
+            con.commit() 
+            
+            print("==============================================UPDATED==============================================")
+
+            print("food_items TABLE")
+            print("")
+            query="SELECT * FROM food_items"
+            print("")
+            cur.execute(query)
+            result=cur.fetchall()
+            print(result)
+
+        except Exception as e:
+            con.rollback()
+            print("Failed to update in database")
+            print("************",e)
+
+    # +++++++++++++++++++++++++++++++++++++++++++++
+      elif val == 2:
+        try:
+            print("-------------------UPDATING STARTS------------------------")
+            print("")
+            print("Profession TABLE")
+            print("")
+            query="SELECT * FROM Profession"
+            print("")
+            cur.execute(query)
+            result=cur.fetchall()
+            print(result)
+
+            print("")
+            pid = str(input("Please enter the profession of Profession Table whose data needs to be updated: "))
+            query = "SELECT * FROM Profession WHERE (profession = '%s')" %(pid)
+            cur.execute(query)
+            result = cur.fetchall() 
+
+            print("")
+            inp1 = int(input("Please enter updated Salary: "))
+            
+            
+            query = "UPDATE Profession SET Salary = '%d' WHERE profession = '%s'" %(inp1 , pid)
+            cur.execute(query)
+            con.commit()
+            
+            print("==============================================UPDATED==============================================")
+
+            print("Profession TABLE")
+            print("")
+            query="SELECT * FROM Profession"
+            print("")
+            cur.execute(query)
+            result=cur.fetchall()
+            print(result)
+
+        except Exception as e:
+            con.rollback()
+            print("Failed to update in database")
+            print("************",e)
+    # +++++++++++++++++++++++++++++++++++++++++++++
+    
+      else:
+            print("")
+            print("INVALID")
 
 def Insertion():
     print("Insertion")
