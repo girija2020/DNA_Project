@@ -82,8 +82,8 @@ CREATE TABLE delivery_apps(Delivery_Id int PRIMARY KEY,
                           );
 
 
-CREATE TABLE menu(location varchar(20),
-                  item_num varchar(20), 
+CREATE TABLE item(location varchar(20),
+                  item_num int, 
                   CONSTRAINT PK_menu PRIMARY KEY (location,item_num)
                  );
 
