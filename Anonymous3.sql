@@ -152,16 +152,16 @@ INSERT INTO employee VALUES (28, "Cleaner", "Delhi", "Kanchana", "GrandInn", 0, 
 INSERT INTO employee VALUES (29, "Chef", "Delhi", "Conjuring", "GrandInn", 12000, 12, 12, 12);
 INSERT INTO employee VALUES (30, "Chef", "Delhi", "Anabelle", "GrandInn", 12000, 1, 12, 12);
 
-INSERT INTO employee VALUES (31, "Manager", "Hyderabad", "Gokul", "BlueStar", 12000, 12, 12, 12);
-INSERT INTO employee VALUES (32, "Manager", "Hyderabad", "Srija", "BlueStar", 12000, 1, 01, 23);
-INSERT INTO employee VALUES (33, "Waiter", "Hyderabad", "Anamika", "BlueStar", 0, 1, 02, 1);
-INSERT INTO employee VALUES (34, "Waiter", "Hyderabad", "Kalyan", "BlueStar", 0, 11, 21, 21);
-INSERT INTO employee VALUES (35, "Waiter", "Hyderabad", "Anand", "BlueStar", 0, 10, 12, 12);
-INSERT INTO employee VALUES (36, "Receptionist", "Hyderabad", "Idiot", "BlueStar", 1200, 1, 2, 2);
-INSERT INTO employee VALUES (37, "Cleaner", "Hyderabad", "Ghost", "BlueStar", 0, 12, 12, 12);
-INSERT INTO employee VALUES (38, "Cleaner", "Hyderabad", "Kanchana", "BlueStar", 0, 12, 12, 12);
-INSERT INTO employee VALUES (39, "Chef", "Hyderabad", "Conjuring", "BlueStar", 12000, 12, 12, 12);
-INSERT INTO employee VALUES (40, "Chef", "Hyderabad", "Anabelle", "BlueStar", 12000, 1, 12, 12);
+INSERT INTO employee VALUES (31, "Manager", "Banglore", "Gokul", "BlueStar", 12000, 12, 12, 12);
+INSERT INTO employee VALUES (32, "Manager", "Banglore", "Srija", "BlueStar", 12000, 1, 01, 23);
+INSERT INTO employee VALUES (33, "Waiter", "Banglore", "Anamika", "BlueStar", 0, 1, 02, 1);
+INSERT INTO employee VALUES (34, "Waiter", "Banglore", "Kalyan", "BlueStar", 0, 11, 21, 21);
+INSERT INTO employee VALUES (35, "Waiter", "Banglore", "Anand", "BlueStar", 0, 10, 12, 12);
+INSERT INTO employee VALUES (36, "Receptionist", "Banglore", "Idiot", "BlueStar", 1200, 1, 2, 2);
+INSERT INTO employee VALUES (37, "Cleaner", "Banglore", "Ghost", "BlueStar", 0, 12, 12, 12);
+INSERT INTO employee VALUES (38, "Cleaner", "Banglore", "Kanchana", "BlueStar", 0, 12, 12, 12);
+INSERT INTO employee VALUES (39, "Chef", "Banglore", "Conjuring", "BlueStar", 12000, 12, 12, 12);
+INSERT INTO employee VALUES (40, "Chef", "Banglore", "Anabelle", "BlueStar", 12000, 1, 12, 12);
 
 UNLOCK TABLES;
 
