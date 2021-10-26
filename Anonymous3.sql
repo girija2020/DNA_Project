@@ -121,23 +121,23 @@ LOCK TABLES employee WRITE;
 
 INSERT INTO employee VALUES (1, "Manager", "Hyderabad", "Gokul", "BlueStar", 12000, 12, 12, 12);
 INSERT INTO employee VALUES (2, "Manager", "Hyderabad", "Srija", "BlueStar", 12000, 1, 01, 23);
-INSERT INTO employee VALUES (3, "Waiter", "Hyderabad", "Anamika", "BlueStar", , 1, 02, 1);
-INSERT INTO employee VALUES (4, "Waiter", "Hyderabad", "Kalyan", "BlueStar", , 11, 21, 21);
-INSERT INTO employee VALUES (5, "Waiter", "Hyderabad", "Anand", "BlueStar", , 10, 12, 12);
+INSERT INTO employee VALUES (3, "Waiter", "Hyderabad", "Anamika", "BlueStar", 0, 1, 02, 1);
+INSERT INTO employee VALUES (4, "Waiter", "Hyderabad", "Kalyan", "BlueStar", 0, 11, 21, 21);
+INSERT INTO employee VALUES (5, "Waiter", "Hyderabad", "Anand", "BlueStar", 0, 10, 12, 12);
 INSERT INTO employee VALUES (6, "Receptionist", "Hyderabad", "Idiot", "BlueStar", 1200, 1, 2, 2);
-INSERT INTO employee VALUES (7, "Cleaner", "Hyderabad", "Ghost", "BlueStar", , 12, 12, 12);
-INSERT INTO employee VALUES (8, "Cleaner", "Hyderabad", "Kanchana", "BlueStar", , 12, 12, 12);
+INSERT INTO employee VALUES (7, "Cleaner", "Hyderabad", "Ghost", "BlueStar", 0, 12, 12, 12);
+INSERT INTO employee VALUES (8, "Cleaner", "Hyderabad", "Kanchana", "BlueStar", 0, 12, 12, 12);
 INSERT INTO employee VALUES (9, "Chef", "Hyderabad", "Conjuring", "BlueStar", 12000, 12, 12, 12);
 INSERT INTO employee VALUES (10, "Chef", "Hyderabad", "Anabelle", "BlueStar", 12000, 1, 12, 12);
 
 INSERT INTO employee VALUES (11, "Manager", "Mumbai", "Gokul", "CoffeeShop", 12000, 12, 12, 12);
 INSERT INTO employee VALUES (12, "Manager", "Mumbai", "Srija", "CoffeeShop", 12000, 1, 01, 23);
-INSERT INTO employee VALUES (13, "Waiter", "Mumbai", "Anamika", "CoffeeShop", , 1, 02, 1);
-INSERT INTO employee VALUES (14, "Waiter", "Mumbai", "Kalyan", "CoffeeShop", , 11, 21, 21);
-INSERT INTO employee VALUES (15, "Waiter", "Mumbai", "Anand", "CoffeeShop", , 10, 12, 12);
+INSERT INTO employee VALUES (13, "Waiter", "Mumbai", "Anamika", "CoffeeShop", 0, 1, 02, 1);
+INSERT INTO employee VALUES (14, "Waiter", "Mumbai", "Kalyan", "CoffeeShop", 0, 11, 21, 21);
+INSERT INTO employee VALUES (15, "Waiter", "Mumbai", "Anand", "CoffeeShop", 0, 10, 12, 12);
 INSERT INTO employee VALUES (16, "Receptionist", "Mumbai", "Idiot", "CoffeeShop", 1200, 1, 2, 2);
-INSERT INTO employee VALUES (17, "Cleaner", "Mumbai", "Ghost", "CoffeeShop", , 12, 12, 12);
-INSERT INTO employee VALUES (18, "Cleaner", "Mumbai", "Kanchana", "CoffeeShop", , 12, 12, 12);
+INSERT INTO employee VALUES (17, "Cleaner", "Mumbai", "Ghost", "CoffeeShop", 0, 12, 12, 12);
+INSERT INTO employee VALUES (18, "Cleaner", "Mumbai", "Kanchana", "CoffeeShop", 0, 12, 12, 12);
 INSERT INTO employee VALUES (19, "Chef", "Mumbai", "Conjuring", "CoffeeShop", 12000, 12, 12, 12);
 INSERT INTO employee VALUES (20, "Chef", "Mumbai", "Anabelle", "CoffeeShop", 12000, 1, 12, 12);
 
