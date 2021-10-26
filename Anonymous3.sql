@@ -16,7 +16,7 @@ CREATE TABLE Profession(Profession varchar(20) PRIMARY KEY, Salary int, Employee
 
 CREATE TABLE Customer(Phone_number int PRIMARY KEY, user_name varchar(20), Email varchar(30) UNIQUE, Amount_Recieved bool, Name varchar(20));
 
-CREATE TABLE Online_delivery(Delivery_id varchar(20) PRIMARY KEY, Location varchar(20) FOREIGN KEY, Order_number int FOREIGN KEY, Customer_id int FOREIGN KEY);
+CREATE TABLE Online_delivery(Delivery_id varchar(20) PRIMARY KEY, Location varchar(20) REFERENCES restaurant.Location_of_Restaurant, Order_number int REFERENCES Orders.Order_number, Customer_Id int REFERENCES Customer.Phone_number);
 
 CREATE TABLE Educational_Qualification(Employee_id int FOREIGN KEY PRIMARY kEY, Educational_qualification varchar(20) PRIMARY KEY);
 CREATE TABLE Tables(location varchar(20) PRIMARY KEY,Table_no int PRIMARY KEY,number_of_seats int,Cost_Of_Table int);
