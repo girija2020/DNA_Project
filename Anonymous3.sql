@@ -88,11 +88,11 @@ CREATE TABLE item(location varchar(20),
                  );
 
 
-CREATE TABLE tablesbooked(phone_num int REFERENCES Customer.Phone_number NOT NULL,
+CREATE TABLE tablesbooked(phone_num int REFERENCES Customer.Phone_number,
                           table_num int NOT NULL,
                           CONSTRAINT PK_tablesbooked PRIMARY KEY (phone_num,table_num)
                          );
-CREATE TABLE ingredients(item_num int REFERENCES food_items.item_number NOT NULL,
+CREATE TABLE ingredients(item_num int REFERENCES food_items.item_number,
                          ingredient varchar(30) NOT NULL,
                          CONSTRAINT PK_ingredients PRIMARY KEY (item_num,ingredient)
                         );
