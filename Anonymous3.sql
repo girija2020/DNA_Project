@@ -21,7 +21,7 @@ CREATE TABLE food_items(item_number int PRIMARY KEY,
                        );
 
 CREATE TABLE employee(employee_id int PRIMARY KEY,
-                      profession varchar(20) REFERENCES Profession.Profession,
+                      profession varchar(20) NOT NULL REFERENCES Profession.Profession,
                       restaurant_location varchar(20) NOT NULL REFERENCES restaurant.Location_of_Restaurant,
                       Employee_name varchar(20) NOT NULL,
                       Restaurant_name varchar(20) NOT NULL,
