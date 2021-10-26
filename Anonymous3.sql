@@ -201,7 +201,7 @@ INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaur
 INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaurant_location, Customer_ID) VALUES (3, "D", 1300, "F", "Hyderabad", 104);
 INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaurant_location, Customer_ID) VALUES (4, "P", 1300, "F", "Hyderabad", 110);
 
-UNLOCK TABLES:
+UNLOCK TABLES;
 
 LOCK TABLES Online_delivery;
 
