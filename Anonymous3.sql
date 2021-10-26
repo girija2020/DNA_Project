@@ -167,10 +167,11 @@ UNLOCK TABLES;
 
 LOCK TABLES Customer;
 
-INSERT INTO Customer VALUES (100, "Police", "police@gmail.com", TRUE, "Police", NULL);
+INSERT INTO Customer VALUES (100, "Police", "police@gmail.com", TRUE, "Police", 1);
 INSERT INTO Customer VALUES (108, "Ambulance", "ambulance@gmail.com", TRUE, "Ambulance", 2);
 INSERT INTO Customer VALUES (104, "Fire", "fire@gmail.com", FALSE, "Fire", 3);
 INSERT INTO Customer VALUES (110, "Postal", "postal@gmail.com", FALSE, "Postal", 4);
+INSERT INTO Customer VALUES (101, "lies", "lies@gmail.com", TRUE, "lies", NULL);
 
 UNLOCK TABLES;
 
@@ -201,3 +202,43 @@ INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaur
 INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaurant_location, Customer_ID) VALUES (4, "P", 1300, "F", "Hyderabad", 110);
 
 UNLOCK TABLES:
+
+LOCK TABLES Online_delivery;
+
+INSERT INTO Online_delivery VALUES (1, "Hyderabad", 2, 108);
+
+UNLOCK TABLES;
+
+LOCK TABLES Educational_Qualification
+
+INSERT INTO (Employee_id int REFERENCES employee.employee_id,
+                                       Educational_qualification varchar(20) NOT NULL,
+                                       PRIMARY KEY(Employee_id, Educational_qualification)
+                                      );
+CREATE TABLE Tables(location varchar(20) REFERENCES restaurant.Location_of_Restaurant,
+                    Table_no int NOT NULL,
+                    number_of_seats int NOT NULL,
+                    Cost_Of_Table int NOT NULL,
+                    CONSTRAINT pk_table PRIMARY KEY(location, Table_no)
+                   );
+
+CREATE TABLE delivery_apps(Delivery_Id int PRIMARY KEY,
+                           Name_of_DeliveryApp VARCHAR(20) NOT NULL
+                          );
+
+
+CREATE TABLE menu(location varchar(20),
+                  item_num int NOT NULL, 
+                  CONSTRAINT PK_menu PRIMARY KEY (location,item_num)
+                 );
+
+
+CREATE TABLE tablesbooked(phone_num int REFERENCES Customer.Phone_number,
+                          table_num int NOT NULL,
+                          CONSTRAINT PK_tablesbooked PRIMARY KEY (phone_num,table_num)
+                         );
+CREATE TABLE ingredients(item_num int REFERENCES food_items.item_number,
+                         ingredient varchar(30) NOT NULL,
+                         CONSTRAINT PK_ingredients PRIMARY KEY (item_num,ingredient)
+                        );
+                        
