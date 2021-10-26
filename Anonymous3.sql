@@ -165,7 +165,7 @@ INSERT INTO employee VALUES (40, "Chef", "Hyderabad", "Anabelle", "BlueStar", 12
 
 UNLOCK TABLES;
 
-LOCK TABLES Customer;
+LOCK TABLES Customer WRITE;
 
 INSERT INTO Customer VALUES (100, "Police", "police@gmail.com", TRUE, "Police", NULL);
 INSERT INTO Customer VALUES (108, "Ambulance", "ambulance@gmail.com", TRUE, "Ambulance", NULL);
@@ -175,7 +175,7 @@ INSERT INTO Customer VALUES (101, "lies", "lies@gmail.com", TRUE, "lies", NULL);
 
 UNLOCK TABLES;
 
-LOCK TABLES Profession;
+LOCK TABLES Profession WRITE;
 
 INSERT INTO Profession VALUES ("Manager", 120000, 14, 12);
 INSERT INTO Profession VALUES ("Waiter", 12000, 14, 0);
@@ -184,7 +184,7 @@ INSERT INTO Profession VALUES ("Chef", 120000, 14, 12);
 
 UNLOCK TABLES;
 
-LOCK TABLES `Ordered_items`;
+LOCK TABLES Ordered_items WRITE;
 
 INSERT INTO Ordered_items VALUES (1, 2, 5);
 INSERT INTO Ordered_items VALUES (1, 3, 5);
@@ -194,7 +194,7 @@ INSERT INTO Ordered_items VALUES (4, 5, 1);
 
 UNLOCK TABLES;
 
-LOCK TABLES Orders;
+LOCK TABLES Orders WRITE;
 
 INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaurant_location, Customer_ID) VALUES (1, "D", 1300, "F", "Hyderabad", 100);
 INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaurant_location, Customer_ID) VALUES (2, "P", 1300, "N", "Hyderabad", 108);
@@ -203,13 +203,13 @@ INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaur
 
 UNLOCK TABLES;
 
-LOCK TABLES Online_delivery;
+LOCK TABLES Online_delivery WRITE;
 
 INSERT INTO Online_delivery VALUES (1, "Hyderabad", 2, 108);
 
 UNLOCK TABLES;
 
-LOCK TABLES Educational_Qualification;
+LOCK TABLES Educational_Qualification WRITE;
 
 INSERT INTO Educational_Qualification VALUES (1, "MBA");
 INSERT INTO Educational_Qualification VALUES (2, "MBA");
@@ -222,7 +222,7 @@ INSERT INTO Educational_Qualification VALUES (32, "MBA");
 
 UNLOCK TABLES;
 
-LOCK TABLES Tables;
+LOCK TABLES Tables WRITE;
 
 INSERT INTO Tables VALUES ("Hyderabad", 2, 4, 150);
 INSERT INTO Tables VALUES ("Hyderabad", 1, 6, 100);
@@ -232,13 +232,13 @@ INSERT INTO Tables VALUES ("Hyderabad", 5, 2, 50);
 
 UNLOCK TABLES;
 
-LOCK TABLES delivery_apps;
+LOCK TABLES delivery_apps WRITE;
 
 INSERT INTO delivery_apps VALUES (1,"Swiggy");
 
 UNLOCK TABLES;
 
-LOCK TABLES menu;
+LOCK TABLES menu WRITE;
 
 INSERT INTO menu VALUES ("Hyderabad", 1);
 INSERT INTO menu VALUES ("Hyderabad", 2);
@@ -248,7 +248,7 @@ INSERT INTO menu VALUES ("Hyderabad", 5);
 
 UNLOCK TABLES;
 
-LOCK TABLES tablesbooked;
+LOCK TABLES tablesbooked WRITE;
 
 INSERT INTO tablesbooked VALUES (100, 1);
 INSERT INTO tablesbooked VALUES (104, 4);
@@ -256,7 +256,7 @@ INSERT INTO tablesbooked VALUES (110, 3);
 
 UNLOCK TABLES;
 
-LOCK TABLES ingredients;
+LOCK TABLES ingredients WRITE;
 
 INSERT INTO ingredients VALUES (1, "Chicken");
 INSERT INTO ingredients VALUES (1, "Rice");
