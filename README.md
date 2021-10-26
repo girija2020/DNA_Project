@@ -1,7 +1,7 @@
 modifications:
 
--menu (varchar) in menu table is changed to itemnumber(int).
--ordered item number is made a primary key attribute in oredered_numbers table.
+     -menu (varchar) in menu table is changed to itemnumber(int).
+     -ordered item number is made a primary key attribute in oredered_numbers table.
 
 
 
