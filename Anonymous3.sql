@@ -99,4 +99,4 @@ CREATE TABLE ingredients(item_num int REFERENCES food_items.item_number,
                         
 LOCK TABLES restaurant WRITE;
 
-INsERT INTO restaurant VALUES (Hyd, BlueStar, 100, 10, 90, 10
+INsERT INTO restaurant VALUES (Hyd, BlueStar, 100, 10000, 900000, 10000, 100000, 50000, 10000);
