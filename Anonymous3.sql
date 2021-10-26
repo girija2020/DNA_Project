@@ -82,7 +82,7 @@ CREATE TABLE delivery_apps(Delivery_Id int PRIMARY KEY,
                           );
 
 
-CREATE TABLE item(location varchar(20),
+CREATE TABLE menu(location varchar(20),
                   item_num int NOT NULL, 
                   CONSTRAINT PK_menu PRIMARY KEY (location,item_num)
                  );
@@ -96,4 +96,7 @@ CREATE TABLE ingredients(item_num int REFERENCES food_items.item_number,
                          ingredient varchar(30) NOT NULL,
                          CONSTRAINT PK_ingredients PRIMARY KEY (item_num,ingredient)
                         );
+                        
+LOCK TABLES restaurant WRITE;
 
+INsERT INTO restaurant VALUES (Hyd, BlueStar, 100, 10, 90, 10
