@@ -2,9 +2,6 @@ import subprocess as sp
 import pymysql
 import pymysql.cursors
 
-import subprocess as sp
-import pymysql
-import pymysql.cursors
 
 def Insertion():
     
