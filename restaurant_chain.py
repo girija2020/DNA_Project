@@ -148,7 +148,7 @@ def Insertion():
             print(">>>>>>>>>>>>>",e)
         return
 
- def dispatch(ch):
+def dispatch(ch):
     """
     Function that maps helper functions to option entered
     """
