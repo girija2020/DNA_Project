@@ -1,5 +1,6 @@
 
 multiple educational qualifications can be inserted per employee.
+
 1)10th class=SSC
 
 2)12th class=IPE
@@ -34,6 +35,7 @@ projection:
     -project restaurant locations in employee relation.
     
 Aggregate:
+    
     -Find the average salary  of all the professions.
 
 Search:
