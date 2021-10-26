@@ -167,7 +167,7 @@ UNLOCK TABLES;
 
 LOCK TABLES Customer;
 
-INSERT INTO Customer VALUES (100, "Police", "police@gmail.com", TRUE, "Police", 1);
+INSERT INTO Customer VALUES (100, "Police", "police@gmail.com", TRUE, "Police", NULL);
 INSERT INTO Customer VALUES (108, "Ambulance", "ambulance@gmail.com", TRUE, "Ambulance", 2);
 INSERT INTO Customer VALUES (104, "Fire", "fire@gmail.com", FALSE, "Fire", 3);
 INSERT INTO Customer VALUES (110, "Postal", "postal@gmail.com", FALSE, "Postal", 4);
@@ -195,9 +195,9 @@ UNLOCK TABLES;
 
 LOCK TABLES Orders;
 
-INSERT INTO Orders(Order_number, Order_number) VALUES (1, , "D", 1300, "F", "Hyderabad", 100);
-INSERT INTO Orders VALUES (2, , "P", 1300, "N", "Hyderabad", 108);
-INSERT INTO Orders VALUES (3, , "D", 1300, "F", "Hyderabad", 104);
-INSERT INTO Orders VALUES (4, , "P", 1300, "F", "Hyderabad", 110);
+INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaurant_location, Customer_ID) VALUES (1, "D", 1300, "F", "Hyderabad", 100);
+INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaurant_location, Customer_ID) VALUES (2, "P", 1300, "N", "Hyderabad", 108);
+INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaurant_location, Customer_ID) VALUES (3, "D", 1300, "F", "Hyderabad", 104);
+INSERT INTO Orders(Order_number, Order_status, Order_amount, Order_type, restaurant_location, Customer_ID) VALUES (4, "P", 1300, "F", "Hyderabad", 110);
 
 UNLOCK TABLES:
