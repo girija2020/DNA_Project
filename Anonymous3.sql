@@ -266,9 +266,4 @@ INSERT INTO ingredients VALUES (5, "My brain");
 INSERT INTO ingredients VALUES (3, "Something");
 
 
-
-(item_num int REFERENCES food_items.item_number,
-                         ingredient varchar(30) NOT NULL,
-                         CONSTRAINT PK_ingredients PRIMARY KEY (item_num,ingredient)
-                        );
-                        
+UNLOCK TABLES;
