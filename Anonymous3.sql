@@ -10,11 +10,11 @@ CREATE TABLE employee(employee_id int PRIMARY KEY, profession varchar(20) REFERE
 
 CREATE TABLE Ordered_items(Order_id int REFERENCES Orders.Order_number, Ordered_item_number int REFERENCES food_items.item_number,PRIMARY KEY(Order_id, Ordered_item_number),  Number_of_Items int);
 
-CREATE TABLE Orders(Order_number int PRIMARY KEY, Order_time timestamp, Order_status char,Order_amouni int, Order_type char, restaurant_location varchar(20) FOREIGN KEY, Customer_ID int FOREIGN KEY);
+CREATE TABLE Orders(Order_number int PRIMARY KEY, Order_time timestamp, Order_status char,Order_amouni int, Order_type char, restaurant_location varchar(20) REFERENCES restaurant.Location_of_Restaurant, Customer_ID int REFERENCES Customer.Phone_number);
 
 CREATE TABLE Profession(Profession varchar(20) PRIMARY KEY, Salary int, Employee_Working_Hours int, PF_Percentage int);
 
-CREATE TABLE Customer(Phone_number int PRIMARY KEY, user_name varchar(20), Email varchar(30) UNIQUE, Order_number int FOREGN KEY, Amount_Recieved bool, Name varchar(20));
+CREATE TABLE Customer(Phone_number int PRIMARY KEY, user_name varchar(20), Email varchar(30) UNIQUE, Amount_Recieved bool, Name varchar(20));
 
 CREATE TABLE Online_delivery(Delivery_id varchar(20) PRIMARY KEY, Location varchar(20) FOREIGN KEY, Order_number int FOREIGN KEY, Customer_id int FOREIGN KEY);
 
