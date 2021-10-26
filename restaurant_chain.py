@@ -64,4 +64,27 @@ while(1):
         tmp = sp.call('clear',shell=True)
         print("Connection Refused: Either username or password is incorrect or user doesn't have access to database")
         tmp = input("Enter any key to CONTINUE>")
+        
+        """Insert:
+     -inserting details  about a customer and the order placed by him/her.
+    - inserting data about a newly joined  employee 
+    Delete:
+             - delete data about a newly resigned employee
+    Update:
+              -modifying/incrementing salaries of the employees with time
+              - updating the costs and ratings of each food item
+
+    Selection:
+        Retrieve complete data about employees in the cooking dept(cooks)
+
+    projection:
+        project restaurant location in employee relation.
+    
+    Aggregate:
+        Find the average salary of an employee in the restaurant.
+
+    Search:
+        
+
+    """
     
