@@ -174,3 +174,30 @@ INSERT INTO Customer VALUES (110, "Postal", "postal@gmail.com", FALSE, "Postal",
 
 UNLOCK TABLES;
 
+LOCK TABLES Profession;
+
+INSERT INTO Profession VALUES ("Manager", 120000, 14, 12);
+INSERT INTO Profession VALUES ("Waiter", 12000, 14, 0);
+INSERT INTO Profession VALUES ("Cleaner", 1200, 6, 0);
+INSERT INTO Profession VALUES ("Chef", 120000, 14, 12);
+
+UNLOCK TABLES;
+
+LOCK TABLES Ordered_items;
+
+INSERT INTO Ordered_items VALUES (1, 2, 5);
+INSERT INTO Ordered_items VALUES (1, 3, 5);
+INSERT INTO Ordered_items VALUES (2, 4, 5);
+INSERT INTO Ordered_items VALUES (3, 3, 1);
+INSERT INTO Ordered_items VALUES (4, 5, 1);
+
+UNLOCK TABLES;
+
+LOCK TABLES Orders;
+
+INSERT INTO Orders(Order_number, Order_number) VALUES (1, , "D", 1300, "F", "Hyderabad", 100);
+INSERT INTO Orders VALUES (2, , "P", 1300, "N", "Hyderabad", 108);
+INSERT INTO Orders VALUES (3, , "D", 1300, "F", "Hyderabad", 104);
+INSERT INTO Orders VALUES (4, , "P", 1300, "F", "Hyderabad", 110);
+
+UNLOCK TABLES:
