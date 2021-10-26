@@ -18,8 +18,8 @@ CREATE TABLE Customer(Phone_number int PRIMARY KEY, user_name varchar(20), Email
 
 CREATE TABLE Online_delivery(Delivery_id varchar(20) PRIMARY KEY, Location varchar(20) REFERENCES restaurant.Location_of_Restaurant, Order_number int REFERENCES Orders.Order_number, Customer_Id int REFERENCES Customer.Phone_number);
 
-CREATE TABLE Educational_Qualification(Employee_id int FOREIGN KEY PRIMARY kEY, Educational_qualification varchar(20) PRIMARY KEY);
-CREATE TABLE Tables(location varchar(20) PRIMARY KEY,Table_no int PRIMARY KEY,number_of_seats int,Cost_Of_Table int);
+CREATE TABLE Educational_Qualification(Employee_id int REFERENCES employee.employee_id, Educational_qualification varchar(20), PRIMARY KEY(Employee_id, Educational_qualification));
+CREATE TABLE Tables(location varchar(20) REFERENCES restaurant.Location_of_Restaurant, Table_no int,number_of_seats int,Cost_Of_Table int, CONSTRAINT pk_table PRIMARY KEY(location, Table_no));
 
 CREATE TABLE delivery_apps(Delivery_Id int PRIMARY KEY,Name_of_DeliveryApp VARCHAR(20));
 
