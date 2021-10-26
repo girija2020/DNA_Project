@@ -66,8 +66,13 @@ while(1):
         tmp = input("Enter any key to CONTINUE>")
         
         """Insert:
-     -inserting details  about a customer and the order placed by him/her.
-    - inserting data about a newly joined  employee 
+     -Insertion of a New customer(with order number,amount received as NULL).
+        - Insertion of a New employee and his educational qualification.
+       - Inserting a new order(it updates order num,amount received in customer relation)
+       -Insertion of a New food item 
+       -Inserting a new profession
+       -Insertion of a New restaurant
+       - Insertion of  a New table
     Delete:
              - delete data about a newly resigned employee
     Update:
@@ -86,5 +91,5 @@ while(1):
     Search:
         
     analysis:
+        Number of  employees who had passed 12th standard in all the restaurants.
     """
-    
