@@ -164,3 +164,10 @@ INSERT INTO employee VALUES (39, "Chef", "Hyderabad", "Conjuring", "BlueStar", 1
 INSERT INTO employee VALUES (40, "Chef", "Hyderabad", "Anabelle", "BlueStar", 12000, 1, 12, 12);
 
 UNLOCK TABLES;
+
+LOCK TABLES Customer;
+
+INSERT INTO Customer VALUES (100, "Police", "police@gmail.com", TRUE, "Police", 1);
+INSERT INTO Customer VALUES (108, "Ambulance", "ambulance@gmail.com", TRUE, "Ambulance", 2);
+INSERT INTO Customer VALUES (104, "Fire", "fire@gmail.com", FALSE, "Fire", 3);
+INSERT INTO Customer VALUES (110, "Postal", "postal@gmail.com", FALSE, "Postal", 4);
