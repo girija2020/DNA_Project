@@ -56,7 +56,8 @@ CREATE TABLE Customer(Phone_number int PRIMARY KEY,
                       user_name varchar(20),
                       Email varchar(30) UNIQUE,
                       Amount_Recieved bool,
-                      Name varchar(20)
+                      Name varchar(20),
+                      Order_number int REFERENCES Orders.Order_number
                      );
 
 CREATE TABLE Online_delivery(Delivery_id varchar(20) PRIMARY KEY,
