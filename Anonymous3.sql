@@ -184,7 +184,7 @@ INSERT INTO Profession VALUES ("Chef", 120000, 14, 12);
 
 UNLOCK TABLES;
 
-LOCK TABLES Ordered_items;
+LOCK TABLES `Ordered_items`;
 
 INSERT INTO Ordered_items VALUES (1, 2, 5);
 INSERT INTO Ordered_items VALUES (1, 3, 5);
@@ -264,6 +264,5 @@ INSERT INTO ingredients VALUES (2, "Masala");
 INSERT INTO ingredients VALUES (4, "Pigeon");
 INSERT INTO ingredients VALUES (5, "My brain");
 INSERT INTO ingredients VALUES (3, "Something");
-
 
 UNLOCK TABLES;
