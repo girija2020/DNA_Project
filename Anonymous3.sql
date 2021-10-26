@@ -5,9 +5,10 @@ USE restaurant_chain;
 
 CREATE TABLE restaurant(Location_of_Restaurant varchar(20) PRIMARY KEY,
                         Name_of_Restaurant varchar(20) NOT NULL,
-                        number_of_tables int, pre_booking int,
-                        on_spot_reservation int,
-                        advertising int,
+                        number_of_tables int NOT NULL,
+                        pre_booking int NOT NULL,
+                        on_spot_reservation int NOT NULL,
+                        advertising int NOT NULL,
                         salaries int,
                         furniture int,
                         raw_materials int
