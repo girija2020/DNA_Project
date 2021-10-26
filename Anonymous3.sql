@@ -8,7 +8,7 @@ CREATE TABLE food_items(item_number int PRIMARY KEY, Descript varchar(100), rati
 
 CREATE TABLE employee(employee_id int PRIMARY KEY, profession varchar(20) REFERENCES Profession.Profession, restaurant_location varchar(20) REFERENCES restaurant.Location_of_Restaurant, Employee_name varchar(20), Restaurant_name varchar(20), PF_amount float, Month_of_joining int, Year_of_joining int, Date_of_joining int);
 
-CREATE TABLE Ordered_items(Order_id int REFERENCES Orders.Order_number, Ordered_item_number int REFERENCES food_items.item_number,PRIMARY KEY(Order_id, Ordered_item_number),  Number_of_Items int);
+CREATE TABLE Ordered_items(Order_id int REFERENCES Orders.Order_number, Ordered_item_number int REFERENCES food_items.item_number,CONSTRAINT pk_Order_item AS PRIMARY KEY(Order_id, Ordered_item_number),  Number_of_Items int);
 
 CREATE TABLE Orders(Order_number int PRIMARY KEY, Order_time timestamp, Order_status char,Order_amouni int, Order_type char, restaurant_location varchar(20) REFERENCES restaurant.Location_of_Restaurant, Customer_ID int REFERENCES Customer.Phone_number);
 
