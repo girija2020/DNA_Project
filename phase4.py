@@ -3,13 +3,79 @@ import pymysql
 import pymysql.cursors
 
 def Report():
-     """
+    """
     Function to evaluate and analyse the given Database
     """
-     print("1. Search all the employees whose last name is ‘Gupta’")
-     print("2. Retrieve complete data about employees in the cooking dept")
-     print("3. Exit")
-     val = int(input("Choose the query you want to execute> "))
+    print("1. Retrieve complete data about employees who are chefs :SELECTION")
+    print("2. project restaurant location in employee relation :PROJECTION")
+    print("3. Find the average salary of all the professions :AGGREGATE")
+    
+    print("4. Exit")
+    val = int(input("Choose the query you want to execute> "))
+
+    if val == 4:
+        return
+
+    elif val == 1:
+
+        try:
+
+            print("")
+            print("Retrieving complete data about employees who are chefs")
+            print("")
+            #query="SELECT COUNT(M.WonBy) \"COUNT\", T.TeamID FROM MATCHES AS M, TEAMS AS T WHERE WonBy IS NOT NULL AND T.TeamID = M.WonBy GROUP BY T.TeamID"
+            query="SELECT * FROM employee WHERE profession='Chef';"
+            print("")
+            cur.execute(query)
+            result=cur.fetchall()
+            print(result)
+
+        except Exception as e:
+            con.rollback()
+            print("Failed to select from database")
+            print("************",e)
+
+    elif val == 2:
+
+        try:
+
+            print("")
+            print("project restaurant location from employee relation.")
+            print("")
+            #query="SELECT PID, Fname, Lname from PLAYERS WHERE PID = (SELECT PID FROM BATSMAN WHERE Runs = (SELECT MAX(Runs) FROM BATSMAN))"
+            query="SELECT DISTINCT restaurant_location FROM employee";
+
+            print("")
+            cur.execute(query)
+            result=cur.fetchall()
+            print(result)
+
+        except Exception as e:
+            con.rollback()
+            print("Failed to project from database")
+            print("************",e)
+
+    elif val == 3:
+
+        try:
+
+            print("")
+            print("Finding the average salary of all the professions")
+            print("")
+            #query="SELECT PID, Fname, Lname from PLAYERS WHERE PID = (SELECT PID FROM BOWLER WHERE Wickets = (SELECT MAX(Wickets) FROM BOWLER))"
+            query="SELECT AVG(Salary) FROM Profession;"
+            print("")
+            cur.execute(query)
+            result=cur.fetchall()
+            print(result)
+
+        except Exception as e:
+            con.rollback()
+            print("Failed to get the average salary of all the professions in database")
+            print("************",e)
+
+    
+
      
 
 def Deletion():
