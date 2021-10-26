@@ -72,7 +72,7 @@ while(1):
        -Insertion of a New food item 
        -Inserting a new profession
        -Insertion of a New restaurant
-       - Insertion of  a New table
+       
     Delete:
              - delete data about a newly resigned employee
     Update:
