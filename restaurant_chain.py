@@ -109,7 +109,7 @@ def Insertion():
             print("Failed to Insert Into the Database")
             print(">>>>>>>>>>>>>",e)
 
-    
+        return
 
     elif val == 3:
         try:
@@ -149,7 +149,9 @@ def Insertion():
             con.rollback()
             print("Failed to Insert Into the Database")
             print(">>>>>>>>>>>>>",e)
-def dispatch(ch):
+        return
+
+ def dispatch(ch):
     """
     Function that maps helper functions to option entered
     """
