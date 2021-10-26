@@ -78,6 +78,7 @@ while(1):
     Update:
               -modifying/incrementing salaries of the employees with time
               - updating the costs and ratings of each food item
+              -updating Pf percentage of profession.
 
     Selection:
         Retrieve complete data about employees in the cooking dept(cooks)
