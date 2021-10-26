@@ -77,12 +77,12 @@ CREATE TABLE Tables(location varchar(20) REFERENCES restaurant.Location_of_Resta
                     CONSTRAINT pk_table PRIMARY KEY(location, Table_no)
                    );
 
-CREATE TABLE delivery_apps(Delivery_Id int PRIMARY KEY,
+CREATE TABLE delivery_apps(Delivery_Id int REFERENCES Online_delivery.Delivery_id,
                            Name_of_DeliveryApp VARCHAR(20) NOT NULL
                           );
 
 
-CREATE TABLE menu(location varchar(20),
+CREATE TABLE menu(location varchar(20) REFERENCES restaurant.Location_of_Restaurant,
                   item_num int NOT NULL, 
                   CONSTRAINT PK_menu PRIMARY KEY (location,item_num)
                  );
@@ -209,35 +209,65 @@ INSERT INTO Online_delivery VALUES (1, "Hyderabad", 2, 108);
 
 UNLOCK TABLES;
 
-LOCK TABLES Educational_Qualification
+LOCK TABLES Educational_Qualification;
 
-INSERT INTO (Employee_id int REFERENCES employee.employee_id,
-                                       Educational_qualification varchar(20) NOT NULL,
-                                       PRIMARY KEY(Employee_id, Educational_qualification)
-                                      );
-CREATE TABLE Tables(location varchar(20) REFERENCES restaurant.Location_of_Restaurant,
-                    Table_no int NOT NULL,
-                    number_of_seats int NOT NULL,
-                    Cost_Of_Table int NOT NULL,
-                    CONSTRAINT pk_table PRIMARY KEY(location, Table_no)
-                   );
+INSERT INTO Educational_Qualification VALUES (1, "MBA");
+INSERT INTO Educational_Qualification VALUES (2, "MBA");
+INSERT INTO Educational_Qualification VALUES (11, "MBA");
+INSERT INTO Educational_Qualification VALUES (12, "MBA");
+INSERT INTO Educational_Qualification VALUES (21, "MBA");
+INSERT INTO Educational_Qualification VALUES (22, "MBA");
+INSERT INTO Educational_Qualification VALUES (31, "MBA");
+INSERT INTO Educational_Qualification VALUES (32, "MBA");
 
-CREATE TABLE delivery_apps(Delivery_Id int PRIMARY KEY,
-                           Name_of_DeliveryApp VARCHAR(20) NOT NULL
-                          );
+UNLOCK TABLES;
+
+LOCK TABLES Tables;
+
+INSERT INTO Tables VALUES ("Hyderabad", 2, 4, 150);
+INSERT INTO Tables VALUES ("Hyderabad", 1, 6, 100);
+INSERT INTO Tables VALUES ("Hyderabad", 3, 6, 200);
+INSERT INTO Tables VALUES ("Hyderabad", 4, 5, 30);
+INSERT INTO Tables VALUES ("Hyderabad", 5, 2, 50);
+
+UNLOCK TABLES;
+
+LOCK TABLES delivery_apps;
+
+INSERT INTO delivery_apps VALUES (1,"Swiggy");
+
+UNLOCK TABLES;
+
+LOCK TABLES menu;
+
+INSERT INTO menu VALUES ("Hyderabad", 1);
+INSERT INTO menu VALUES ("Hyderabad", 2);
+INSERT INTO menu VALUES ("Hyderabad", 3);
+INSERT INTO menu VALUES ("Hyderabad", 4);
+INSERT INTO menu VALUES ("Hyderabad", 5);
+
+UNLOCK TABLES;
+
+LOCK TABLES tablesbooked;
+
+INSERT INTO tablesbooked VALUES (100, 1);
+INSERT INTO tablesbooked VALUES (104, 4);
+INSERT INTO tablesbooked VALUES (110, 3);
+
+UNLOCK TABLES;
+
+LOCK TABLES ingredients;
+
+INSERT INTO ingredients VALUES (1, "Chicken");
+INSERT INTO ingredients VALUES (1, "Rice");
+INSERT INTO ingredients VALUES (2, "Masala");
+INSERT INTO ingredients VALUES (4, "Pigeon");
+INSERT INTO ingredients VALUES (5, "My brain");
+INSERT INTO ingredients VALUES (3, "Something");
 
 
-CREATE TABLE menu(location varchar(20),
-                  item_num int NOT NULL, 
-                  CONSTRAINT PK_menu PRIMARY KEY (location,item_num)
-                 );
 
-
-CREATE TABLE tablesbooked(phone_num int REFERENCES Customer.Phone_number,
-                          table_num int NOT NULL,
-                          CONSTRAINT PK_tablesbooked PRIMARY KEY (phone_num,table_num)
-                         );
-CREATE TABLE ingredients(item_num int REFERENCES food_items.item_number,
+(item_num int REFERENCES food_items.item_number,
                          ingredient varchar(30) NOT NULL,
                          CONSTRAINT PK_ingredients PRIMARY KEY (item_num,ingredient)
                         );
