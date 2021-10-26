@@ -105,3 +105,14 @@ INSERT INTO restaurant VALUES ("Delhi", "GrandInn", 120, 12000, 920000, 12000, 1
 INSERT INTO restaurant VALUES ("Chennai", "BlueStar", 130, 13000, 930000, 13000, 130000, 53000, 13000);
 
 UNLOCK TABLES restaurant;
+
+LOCK TABLES food_items WRITE;
+
+INSERT INTO food_items VALUES (1, "Biryani", 3, 150.15);
+INSERT INTO food_items VALUES (2, "Kheema Masala", 2, 160);
+INSERT INTO food_items VALUES (3, "Mushroom Pasta", 3, 100);
+INSERT INTO food_items VALUES (4, "Vegetable Salad", 5, 1000);
+INSERT INTO food_items VALUES (5, "Pigeon Curry", 0, 10);
+INSERT INTO food_items VALUES (6, "My head", 5, 100000);
+
+UNLOCK TABLES food_items;
