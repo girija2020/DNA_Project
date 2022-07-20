@@ -425,7 +425,7 @@ while(1):
             while(1):
                 tmp = sp.call('clear',shell=True)
                 print("")
-                print("======================Functions of Cricket Database======================")
+                print("======================Functions of Database======================")
                 print("")
                 print("1. Insertion")
                 print("2. Updation")
